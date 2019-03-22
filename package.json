@@ -1,6 +1,6 @@
 {
   "name": "eslint-prettier-boilerplate",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Starter repository for a JS project using Prettier formatting.",
   "main": "index.js",
   "scripts": {
