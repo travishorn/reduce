@@ -1,3 +1,5 @@
 const package = require("./package.json");
 
-console.log(`${package.name} version ${package.version} installed.`);
+process.stdout.write(
+  `${package.name} version ${package.version} installed.\n\n`
+);
