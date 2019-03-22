@@ -1,6 +1,6 @@
 # ESLint Prettier Boilerplate
 
-Starter repository for a JS project using Prettier formatting.
+Starter repository for a JS project using ESLint and Prettier recommended rules and styles.
 
 ## Installation
 
@@ -12,10 +12,18 @@ git clone https://github.com/travishorn/eslint-prettier-boilerplate.git
 
 ## Usage
 
-Start developing. Any files with extension `.js` can be linted against Prettier rules.
+Start developing.
+
+Any files with extension `.js` can be linted against ESLint and Prettier recommended rules.
 
 ```
 npm run lint
+```
+
+You can automatically fix some problems.
+
+```
+npm run lint:fix
 ```
 
 ## Editor Setup
@@ -26,6 +34,14 @@ highlight warnings and errors using this boilerplate.
 1. Press **Ctrl + Shift + X** or click the **Extenstions** button
 2. Search for **ESLint**
 3. Click the **Install** button next to the **ESLint** search result
+
+With this extension, you can also choose to automatically fix/format your code when you save. Add the following to your Visual Studio Code settings.
+
+```
+"eslint.autoFixOnSave": true
+```
+
+This setting only takes effect if  `files.autoSave` is set to `off`, `onFocusChange`, or `onWindowChange`.
 
 ## License
 
