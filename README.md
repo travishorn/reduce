@@ -11,6 +11,18 @@ Clone the Git repository.
 git clone https://github.com/travishorn/eslint-prettier-boilerplate.git
 ```
 
+Install the dependencies.
+
+```
+npm install
+```
+
+Since you are probably using this as a base for a new project, you probably also want to remove the `origin` remote.
+
+```
+git remote remove origin
+```
+
 ## Usage
 
 Start developing.
