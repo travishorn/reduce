@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1 Reduce
+
+  each post in listing
+    .post
+      a(href=post.url)
+        h2= post.title
+
+      .post-meta
+        .post-meta-comments
+          a(href=`https://reddit.com${post.permalink}`) #{post.num_comments} comment
+            - if (post.num_comments !== 1)
+              | s
+
+        .post-meta-subreddit
+          a(href=`https://reddit.com/r/${post.subreddit}`) r/#{post.subreddit}
+
+        .post-meta-domain
+          - if (post.domain.slice(0, 5) !== "self.")
+            a(href=`https://${post.domain}`)= post.domain
+          - else
+            = post.domain
+
+      - if (post.preview)
+        .post-preview
+          - if (post.preview.reddit_video_preview)
+            a(href=post.url)
+              video.post-preview-video(controls)
+                source(src=post.preview.reddit_video_preview.scrubber_media_url)
+          - else if (post.preview.images)
+            a(href=post.url)
+              img.post-preview-image(src=post.preview.images[0].source.url.replace(/&amp;/, "&"))
+
+      -if (post.selftext)
+        div= post.selftext

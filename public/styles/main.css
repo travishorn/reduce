@@ -1,0 +1,45 @@
+html {
+  font-size: 22px;
+}
+
+body {
+  background-color: #3D3D3B;
+  color: #F4F4F4;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 1rem auto;
+}
+
+a {
+  color: #D9491D;
+}
+
+.post {
+  margin-bottom: 10rem;
+}
+
+.post-preview {
+  text-align: center;
+}
+
+.post-preview-video,
+.post-preview-image {
+  max-width: 100%;
+}
+
+.post-meta {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.post-meta-subreddit {
+  text-align: center;
+}
+
+.post-meta-domain {
+  text-align: right;
+}

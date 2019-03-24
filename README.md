@@ -1,31 +1,50 @@
-# ESLint Prettier Boilerplate
+# Reduce
 
-Starter repository for a JS project using ESLint and Prettier recommended rules
-and styles.
+Simple reddit viewer.
 
 ## Installation
 
 Clone the Git repository.
 
 ```
-git clone https://github.com/travishorn/eslint-prettier-boilerplate.git
+git clone http://github.com/travishorn/reduce.git
 ```
 
 Install the dependencies.
 
 ```
+cd reduce
 npm install
 ```
 
-Since you are probably using this as a base for a new project, you probably also want to remove the `origin` remote.
+Sign up for a reddit API key
+
+1. Visit https://www.reddit.com/prefs/apps
+2. Click the **create an app...** button
+3. Enter a name (such as "Reduce")
+4. Make sure **web app** is selected
+5. Under **redirect uri**, enter `http://127.0.0.1:3000/reddit-auth-callback`
+
+Create a `.env` file in the project's root directory with the following
+contents.
 
 ```
-git remote remove origin
+PORT=3000
+REDDIT_CLIENT_ID=[your reddit app's client ID]
+REDDIT_SECRET=[your reddit app's secret]
 ```
 
 ## Usage
 
-Start developing.
+```
+node index
+```
+
+Local server will be listening on port 3000. Visit http://127.0.0.1:3000. If
+you haven't authorized the app with reddit yet, you'll be redirected to reddit's
+authorization page for this app.
+
+## Linting
 
 Any files with extension `.js` can be linted against ESLint and Prettier
 recommended rules.
@@ -39,25 +58,6 @@ You can automatically fix some problems.
 ```
 npm run lint:fix
 ```
-
-## Editor Setup
-
-If you're using Visual Studio Code, you can install the ESLint extension, which
-will automatically highlight warnings and errors using this boilerplate.
-
-1. Press **Ctrl + Shift + X** or click the **Extenstions** button
-2. Search for **ESLint**
-3. Click the **Install** button next to the **ESLint** search result
-
-With this extension, you can also choose to automatically fix/format your code
-when you save. Add the following to your Visual Studio Code settings.
-
-```
-"eslint.autoFixOnSave": true
-```
-
-This setting only takes effect if  `files.autoSave` is set to `off`,
-`onFocusChange`, or `onWindowChange`.
 
 ## License
 
